@@ -1,0 +1,55 @@
+---
+import AppLayout from '../components/AppLayout.astro';
+import HighLights from '../components/HighLights.astro';
+import HighLightCard from '../components/HighLightCard.astro';
+---
+<AppLayout BannerText='Desarrollo web'>
+  <section id="main" class="wrapper">
+    <div class="inner">
+      <div class="content">
+        <header>
+        <h2>Desarrollo de páginas web</h2>
+        </header>
+        <br>
+        
+        <h3>¿Qué ofrecemos?</h3>
+        <table cellpadding="0" cellspacing="0">	
+          <p>- Asesoramiento a la hora de digitalizar tu negocio</p>
+          <p>- Alojamiento de correo electrónico y página web</p>
+          <p>- Desarrollo web</p>
+          <p>- Mantenimiento de páginas web</p>
+        </table>
+      </div>
+      <h2>Algunos de nuestros trabajos</h2>
+      <HighLights>
+          <HighLightCard 
+            title='Agroturismo Urrutia'
+            text='Desarrollo de una web para una casa de turismo rural'
+            img='/images/web/agroturismourrutia.jpg'
+            link='https://agroturismourrutia.com/'
+          />
+          <HighLightCard 
+            title='Panificadora Lakua'
+            text='Web de presentación, productos y contacto'
+            img='/images/web/panlakua.jpg'
+            link='https://panificadoralakua.com/'
+          />
+          <HighLightCard 
+            title='Industrias Kaldea'
+            text='Corrección de fallos en la web y nuevo contenido'
+            img='/images/web/kaldea.jpg'
+            link='https://kaldea.es/'
+          />
+          
+        </HighLights>
+        <HighLights>
+          <HighLightCard 
+            title='CM10 Gestión de proyectos'
+            text='Web con portfolio de proyectos siguiendo el estilo de la web antigua'
+            img='/images/web/cm10.jpg'
+            link='https://cm10.es/'
+          />
+        </HighLights>
+    </div>
+  </section>
+</AppLayout>

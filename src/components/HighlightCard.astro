@@ -1,17 +1,24 @@
 ---
+import Link from './Link.astro';
 export interface Props {
-	icon: string;
+	icon?: string;
 	title: string;
   text: string;
+  img?: string;
+  link?: string;
 }
-const { icon, title, text } = Astro.props;
+const { icon, title, text, img, link } = Astro.props as Props;
 ---
 <section>
   <div class="content">
-    <header>
-      <a href="#" class={icon}><span class="label">Icon</span></a>
-      <h3>{title}</h3>
-    </header>
-    <p>{text}</p>
+    
+      <header>
+        {icon ? <a href="#" class={icon}><span class="label">Icon</span></a> : null}
+        <h3>{title}</h3>
+      </header>
+      <p>{text}</p>
+      {img ? <img src={img} width="100%"/> : null}
+      {link ? <Link link={link}>Visitar</Link> : null}
+    
   </div>
 </section>
