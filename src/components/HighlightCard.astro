@@ -1,0 +1,17 @@
+---
+export interface Props {
+	icon: string;
+	title: string;
+  text: string;
+}
+const { icon, title, text } = Astro.props;
+---
+<section>
+  <div class="content">
+    <header>
+      <a href="#" class={icon}><span class="label">Icon</span></a>
+      <h3>{title}</h3>
+    </header>
+    <p>{text}</p>
+  </div>
+</section>

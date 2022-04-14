@@ -1,0 +1,56 @@
+---
+import AppLayout from '../components/AppLayout.astro';
+---
+<AppLayout BannerText='Contacto'>
+  <section id="main" class="wrapper">
+    <div class="inner">
+      <div class="content">
+        <header>
+        <h2></h2>
+        </header>
+        <p></p>
+  
+        
+        <table cellpadding="0" cellspacing="0">			 	
+        <h4>LessLan Informatica</h4>
+        <ul class="alt">
+          <li>Avendaño 25 Bajo</li>
+          <li>Vitoria-Gasteiz 01008</li>
+          <li>Álava - España</li>
+          <li>945-21-33-97</li>
+          <li>Horario:	9:00 a 14:00   17:00 a 20:00</li>
+          <li>info@lesslanvitoria.com</li>
+        </ul>
+        </table>
+              
+        <p></p>
+        <table cellpadding="5" cellspacing="5">
+        <h3>Localizacion</h3>
+        <style>
+          #map {
+            height: 400px;
+            width: 100%;
+          }
+        </style>
+        <div id="map"></div>
+        <script is:inline>
+          function initMap() {
+            var uluru = {lat: 42.845532, lng: -2.684001};
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 15,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
+          }
+        </script>
+        <script is:inline async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRxETzwrYSLeOWp0ggiBoQ3BH4OcIs96o&callback=initMap">
+        </script>
+        </table>
+      </div>
+    </div>
+  </section>
+</AppLayout>

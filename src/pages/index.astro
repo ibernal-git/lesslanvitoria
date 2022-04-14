@@ -1,13 +1,75 @@
 ---
-
+import AppLayout from '../components/AppLayout.astro';
+import HighLights from '../components/HighLights.astro';
+import HighLightCard from '../components/HighLightCard.astro';
 ---
-<html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<AppLayout BannerText='Expertos en Tecnología de Vanguardia'>
+  <section class="wrapper">
+    <div class="inner">
+      <header class="special">
+        <h2>Nuestros Marcas</h2>
+        <p> Somos partners, distribuidores oficiales, instaladores certificados de las siguientes marcas:</p>
+          <div><img src="/images/marcas.png"></div> 
+        
+        
+        <br>
+        <h2>Nuestro compromiso</h2>
+        <p>En LessLan Informática Vitoria nos definimos como una empresa dedicada a servicios profesionales de la empresa, ofreciendo soluciones de mantenimiento, montaje y desarrollo de sistemas informáticos</p>
+        <p>Tenemos dos cosas claras:</p>
+        <p>El servicio, la atención inmediata a nuestros clientes, escuchando los posibles problemas que nos plantean e intentando buscar cual es la mejor solución.</p>
+        <p>Proporcionar un amplio catálogo, consiguiendo tener las últimas novedades del sector, con productos de calidad y fabricantes reconocidos.</p>
+
+      </header>
+      <HighLights>
+        <HighLightCard 
+          icon='icon fa-solid fa-id-card'
+          title='Gestión'
+          text='Soporte Tecnico y Asesoramiento para todo tipo de Sistemas Operativos y aplicaciones del mercado'
+        />
+        <HighLightCard 
+          icon='icon fa-solid fa-database'
+          title='Datos'
+          text='Contamos con las soluciones mas modernas para la proteccion de datos de su empresa, almacenamiento y copias de seguridad'
+        />
+        <HighLightCard 
+          icon='icon fa-solid fa-server'
+          title='Servidores'
+          text='Instalación de Servidores de datos, almacenamiento RAID, sistemas de Snapshot, copias de seguridad en la nube, sistemas VPN y TeleTrabajo'
+        />
+        <HighLightCard 
+          icon='icon fa-solid fa-wifi'
+          title='Infraestructuras WiFi'
+          text='Sistemas WiFi Profesionales certificadas para grandes superficies, hoteles, viviendas unifamiliares'
+        />
+        <HighLightCard 
+          icon='icon fa-solid fa-video'
+          title='Videovigilancia'
+          text='Sistemas de proteción para oficinas, hoteles, viviendas'
+        />
+        <HighLightCard 
+          icon='icon fa-solid fa-screwdriver-wrench'
+          title='Reparación'
+          text='Contamos con un taller especializado en todas marcas de portatiles y equipos sobremesa, ya sean puestos de trabajo o servidores'
+        />
+      </HighLights>
+    </div>
+  </section>
+
+<!-- CTA -->
+  <section id="cta" class="wrapper">
+    <div class="inner">
+      <h2>Principios</h2>
+      
+  
+      <p>Venta material informático tanto a particulares en su tienda física, como a empresas, contamos con el apoyo de los mejores mayorista informáticos del territorio nacional.</p>
+
+      <p>Equipo técnico especializado y cualificado para solucionar los más diversos problemas que pueden seguir a nuestros clientes, tanto particulares como de empresa.</p>
+
+      <p>Empresa cualificada y especializado en los distintos problemas laborales que nuestros clientes puedan afrontar.</p>
+
+      <p>Empresa cualificada y especializado para afrontar reparaciones y asistencias solicitadas por empresas terceras</p>
+    
+    
+    </div>
+  </section>
+</AppLayout>
