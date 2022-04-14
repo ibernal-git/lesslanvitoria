@@ -1,5 +1,7 @@
 ---
 import AppLayout from '../components/AppLayout.astro';
+import Testimonials from '../components/Testimonials.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
 ---
 <AppLayout BannerText='Servicio Empresas'>
   <section id="main" class="wrapper">
@@ -34,57 +36,18 @@ import AppLayout from '../components/AppLayout.astro';
       </div>
     </div>
   </section>
-  
-
-  
-  <!-- Testimonials -->
-  <section class="wrapper">
-    <div class="inner">
-      <header class="special">
-        <h2>Instalaciones de éxito</h2>
-        <p></p>
-      </header>
-      <div class="testimonials">
-        <section>
-          <div class="content">
-            <blockquote>
-              <p>Instalación radio enlace Airmax en Vitoria con la finalidad de unir dos punto a una distancia de 2,5 km con una tasa de transferencia de 150Mb/s</p>
-            </blockquote>
-            <div class="author">
-              <div class="image">
-                <!--<img src="images/pic01.jpg" alt="" />-->
-              </div>
-              <p class="credit">- <strong>E.O.</strong><span></span></p>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div class="content">
-            <blockquote>
-              <p>Plataforma web para el monitoreo y contabilidad de los consumos de agua fria, calefaccion y ACS para comunidades de vecinos</p>
-            </blockquote>
-            <div class="author">
-              <div class="image">
-                  <!-- <img src="images/pic03.jpg" alt="" /> -->
-              </div>
-              <p class="credit">- <strong>Instalaciones Fojansa S.L.</strong> <span></span></p>
-            </div>
-          </div>
-        </section>
-        <section>
-          <div class="content">
-            <blockquote>
-              <p>Instalacion del sistema CCTV con camaras de tecnologia IP con servidores Qnap unidos mediante fibra óptica</p>
-            </blockquote>
-            <div class="author">
-              <div class="image">
-                <!--<img src="images/pic02.jpg" alt="" />-->
-              </div>
-              <p class="credit">- <strong>Cascos Maquinaria S.A.</strong> <span></span></p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  </section>
+  <Testimonials>
+    <TestimonialCard 
+      text='Instalación radio enlace Airmax en Vitoria con la finalidad de unir dos punto a una distancia de 2,5 km con una tasa de transferencia de 150Mb/s'
+      credit='E.O.'
+    />
+    <TestimonialCard 
+      text='Plataforma web para el monitoreo y contabilidad de los consumos de agua fria, calefaccion y ACS para comunidades de vecinos'
+      credit='Instalaciones Fojansa S.L.'
+    />
+    <TestimonialCard 
+      text='Instalacion del sistema CCTV con camaras de tecnologia IP con servidores Qnap unidos mediante fibra óptica'
+      credit='Cascos Maquinaria S.A.'
+    />
+  </Testimonials>
 </AppLayout>
