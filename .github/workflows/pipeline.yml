@@ -28,7 +28,7 @@ jobs:
         with:
           access_token: ${{ github.token }}
   build:
-    runs-on: macos-11
+    runs-on: windows-latest
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
@@ -45,7 +45,19 @@ jobs:
       - name: Build
         run: |
           npm run build
-          touch ./dist/.nojekyll     
+          touch ./dist/.nojekyll
+      - uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: dist  
+  repo:
+    needs: [build]
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: dist
       # Push to your pages repo
       - name: Push to pages repo
         uses: cpina/github-action-push-to-another-repository@main
