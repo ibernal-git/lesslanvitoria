@@ -28,7 +28,7 @@ jobs:
         with:
           access_token: ${{ github.token }}
   build:
-    runs-on: windows-latest
+    runs-on: macos-11
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
