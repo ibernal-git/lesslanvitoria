@@ -1,0 +1,6 @@
+RedirectMatch 301 /contacto.html /contacto
+RedirectMatch 301 /empresas.html /empresas
+RedirectMatch 301 /particulares.html /particulares
+RedirectMatch 301 /soporte.html /soporte
+RedirectMatch 301 /tickets.html /
+RedirectMatch 301 /tickets /

@@ -1,0 +1,13 @@
+User-agent: *
+Disallow: /intranet.html
+Disallow: /intranet/indexmobile.html
+Disallow: /seguro/seguro.html
+Disallow: /intranet
+Allow: /
+Disallow: /intranet/index.html
+Disallow: /seguro/seguo.html
+Disallow: /intranet.html
+Disallow: /intranet
+Disallow: /cm10
+Disallow: /clinicadental
+Disallow: /observatorio
